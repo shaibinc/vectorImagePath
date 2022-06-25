@@ -1,0 +1,117 @@
+{
+  "buildFiles": [
+    "/Users/shaibin/Downloads/vector/app/src/main/jni/Android.mk",
+    "/Users/shaibin/Downloads/vector/app/src/main/jni/Application.mk"
+  ],
+  "cleanCommands": [
+    "/Users/shaibin/Library/Android/sdk/ndk/24.0.8215888/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/Users/shaibin/Downloads/vector/app/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/Users/shaibin/Downloads/vector/app/src/main/jni/Application.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-21 NDK_OUT\u003d/Users/shaibin/Downloads/vector/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003d/Users/shaibin/Downloads/vector/app/build/intermediates/ndkBuild/debug/lib clean"
+  ],
+  "buildTargetsCommand": "/Users/shaibin/Library/Android/sdk/ndk/24.0.8215888/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/Users/shaibin/Downloads/vector/app/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/Users/shaibin/Downloads/vector/app/src/main/jni/Application.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-21 NDK_OUT\u003d/Users/shaibin/Downloads/vector/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003d/Users/shaibin/Downloads/vector/app/build/intermediates/ndkBuild/debug/lib {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "antrace-debug-arm64-v8a": {
+      "buildCommand": "/Users/shaibin/Library/Android/sdk/ndk/24.0.8215888/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/Users/shaibin/Downloads/vector/app/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/Users/shaibin/Downloads/vector/app/src/main/jni/Application.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-21 NDK_OUT\u003d/Users/shaibin/Downloads/vector/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003d/Users/shaibin/Downloads/vector/app/build/intermediates/ndkBuild/debug/lib /Users/shaibin/Downloads/vector/app/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/libantrace.so",
+      "toolchain": "toolchain-arm64-v8a",
+      "abi": "arm64-v8a",
+      "artifactName": "antrace",
+      "files": [
+        {
+          "src": "/Users/shaibin/Downloads/vector/app/src/main/jni/antrace.cpp",
+          "flags": "-target aarch64-none-linux-android21 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/shaibin/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -D_FORTIFY_SOURCE\u003d2 -fno-exceptions -fno-rtti -fpic -O0 -UNDEBUG -fno-limit-debug-info -I/Users/shaibin/Downloads/vector/app/src/main/jni -DANDROID -fvisibility\u003dhidden -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "/Users/shaibin/Downloads/vector/app/src/main/jni/potrace/backend_dxf.c",
+          "flags": "-target aarch64-none-linux-android21 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/shaibin/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -D_FORTIFY_SOURCE\u003d2 -fpic -O0 -UNDEBUG -fno-limit-debug-info -I/Users/shaibin/Downloads/vector/app/src/main/jni -DANDROID -fvisibility\u003dhidden -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "/Users/shaibin/Downloads/vector/app/src/main/jni/potrace/backend_eps.c",
+          "flags": "-target aarch64-none-linux-android21 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/shaibin/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -D_FORTIFY_SOURCE\u003d2 -fpic -O0 -UNDEBUG -fno-limit-debug-info -I/Users/shaibin/Downloads/vector/app/src/main/jni -DANDROID -fvisibility\u003dhidden -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "/Users/shaibin/Downloads/vector/app/src/main/jni/potrace/backend_geojson.c",
+          "flags": "-target aarch64-none-linux-android21 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/shaibin/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -D_FORTIFY_SOURCE\u003d2 -fpic -O0 -UNDEBUG -fno-limit-debug-info -I/Users/shaibin/Downloads/vector/app/src/main/jni -DANDROID -fvisibility\u003dhidden -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "/Users/shaibin/Downloads/vector/app/src/main/jni/potrace/backend_pdf.c",
+          "flags": "-target aarch64-none-linux-android21 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/shaibin/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -D_FORTIFY_SOURCE\u003d2 -fpic -O0 -UNDEBUG -fno-limit-debug-info -I/Users/shaibin/Downloads/vector/app/src/main/jni -DANDROID -fvisibility\u003dhidden -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "/Users/shaibin/Downloads/vector/app/src/main/jni/potrace/backend_pgm.c",
+          "flags": "-target aarch64-none-linux-android21 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/shaibin/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -D_FORTIFY_SOURCE\u003d2 -fpic -O0 -UNDEBUG -fno-limit-debug-info -I/Users/shaibin/Downloads/vector/app/src/main/jni -DANDROID -fvisibility\u003dhidden -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "/Users/shaibin/Downloads/vector/app/src/main/jni/potrace/backend_svg.c",
+          "flags": "-target aarch64-none-linux-android21 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/shaibin/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -D_FORTIFY_SOURCE\u003d2 -fpic -O0 -UNDEBUG -fno-limit-debug-info -I/Users/shaibin/Downloads/vector/app/src/main/jni -DANDROID -fvisibility\u003dhidden -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "/Users/shaibin/Downloads/vector/app/src/main/jni/potrace/backend_xfig.c",
+          "flags": "-target aarch64-none-linux-android21 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/shaibin/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -D_FORTIFY_SOURCE\u003d2 -fpic -O0 -UNDEBUG -fno-limit-debug-info -I/Users/shaibin/Downloads/vector/app/src/main/jni -DANDROID -fvisibility\u003dhidden -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "/Users/shaibin/Downloads/vector/app/src/main/jni/potrace/bbox.c",
+          "flags": "-target aarch64-none-linux-android21 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/shaibin/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -D_FORTIFY_SOURCE\u003d2 -fpic -O0 -UNDEBUG -fno-limit-debug-info -I/Users/shaibin/Downloads/vector/app/src/main/jni -DANDROID -fvisibility\u003dhidden -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "/Users/shaibin/Downloads/vector/app/src/main/jni/potrace/curve.c",
+          "flags": "-target aarch64-none-linux-android21 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/shaibin/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -D_FORTIFY_SOURCE\u003d2 -fpic -O0 -UNDEBUG -fno-limit-debug-info -I/Users/shaibin/Downloads/vector/app/src/main/jni -DANDROID -fvisibility\u003dhidden -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "/Users/shaibin/Downloads/vector/app/src/main/jni/potrace/decompose.c",
+          "flags": "-target aarch64-none-linux-android21 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/shaibin/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -D_FORTIFY_SOURCE\u003d2 -fpic -O0 -UNDEBUG -fno-limit-debug-info -I/Users/shaibin/Downloads/vector/app/src/main/jni -DANDROID -fvisibility\u003dhidden -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "/Users/shaibin/Downloads/vector/app/src/main/jni/potrace/flate.c",
+          "flags": "-target aarch64-none-linux-android21 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/shaibin/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -D_FORTIFY_SOURCE\u003d2 -fpic -O0 -UNDEBUG -fno-limit-debug-info -I/Users/shaibin/Downloads/vector/app/src/main/jni -DANDROID -fvisibility\u003dhidden -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "/Users/shaibin/Downloads/vector/app/src/main/jni/potrace/getopt.c",
+          "flags": "-target aarch64-none-linux-android21 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/shaibin/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -D_FORTIFY_SOURCE\u003d2 -fpic -O0 -UNDEBUG -fno-limit-debug-info -I/Users/shaibin/Downloads/vector/app/src/main/jni -DANDROID -fvisibility\u003dhidden -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "/Users/shaibin/Downloads/vector/app/src/main/jni/potrace/getopt1.c",
+          "flags": "-target aarch64-none-linux-android21 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/shaibin/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -D_FORTIFY_SOURCE\u003d2 -fpic -O0 -UNDEBUG -fno-limit-debug-info -I/Users/shaibin/Downloads/vector/app/src/main/jni -DANDROID -fvisibility\u003dhidden -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "/Users/shaibin/Downloads/vector/app/src/main/jni/potrace/greymap.c",
+          "flags": "-target aarch64-none-linux-android21 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/shaibin/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -D_FORTIFY_SOURCE\u003d2 -fpic -O0 -UNDEBUG -fno-limit-debug-info -I/Users/shaibin/Downloads/vector/app/src/main/jni -DANDROID -fvisibility\u003dhidden -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "/Users/shaibin/Downloads/vector/app/src/main/jni/potrace/lzw.c",
+          "flags": "-target aarch64-none-linux-android21 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/shaibin/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -D_FORTIFY_SOURCE\u003d2 -fpic -O0 -UNDEBUG -fno-limit-debug-info -I/Users/shaibin/Downloads/vector/app/src/main/jni -DANDROID -fvisibility\u003dhidden -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "/Users/shaibin/Downloads/vector/app/src/main/jni/potrace/potracelib.c",
+          "flags": "-target aarch64-none-linux-android21 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/shaibin/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -D_FORTIFY_SOURCE\u003d2 -fpic -O0 -UNDEBUG -fno-limit-debug-info -I/Users/shaibin/Downloads/vector/app/src/main/jni -DANDROID -fvisibility\u003dhidden -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "/Users/shaibin/Downloads/vector/app/src/main/jni/potrace/progress_bar.c",
+          "flags": "-target aarch64-none-linux-android21 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/shaibin/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -D_FORTIFY_SOURCE\u003d2 -fpic -O0 -UNDEBUG -fno-limit-debug-info -I/Users/shaibin/Downloads/vector/app/src/main/jni -DANDROID -fvisibility\u003dhidden -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "/Users/shaibin/Downloads/vector/app/src/main/jni/potrace/render.c",
+          "flags": "-target aarch64-none-linux-android21 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/shaibin/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -D_FORTIFY_SOURCE\u003d2 -fpic -O0 -UNDEBUG -fno-limit-debug-info -I/Users/shaibin/Downloads/vector/app/src/main/jni -DANDROID -fvisibility\u003dhidden -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "/Users/shaibin/Downloads/vector/app/src/main/jni/potrace/trace.c",
+          "flags": "-target aarch64-none-linux-android21 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/shaibin/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -D_FORTIFY_SOURCE\u003d2 -fpic -O0 -UNDEBUG -fno-limit-debug-info -I/Users/shaibin/Downloads/vector/app/src/main/jni -DANDROID -fvisibility\u003dhidden -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "/Users/shaibin/Downloads/vector/app/src/main/jni/potrace/trans.c",
+          "flags": "-target aarch64-none-linux-android21 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/shaibin/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -D_FORTIFY_SOURCE\u003d2 -fpic -O0 -UNDEBUG -fno-limit-debug-info -I/Users/shaibin/Downloads/vector/app/src/main/jni -DANDROID -fvisibility\u003dhidden -Wformat -Werror\u003dformat-security"
+        }
+      ],
+      "output": "/Users/shaibin/Downloads/vector/app/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/libantrace.so"
+    }
+  },
+  "toolchains": {
+    "toolchain-arm64-v8a": {
+      "cCompilerExecutable": "/Users/shaibin/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang",
+      "cppCompilerExecutable": "/Users/shaibin/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
+    }
+  },
+  "cFileExtensions": [
+    "c"
+  ],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}
