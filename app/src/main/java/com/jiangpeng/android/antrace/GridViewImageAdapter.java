@@ -105,6 +105,11 @@ public class GridViewImageAdapter extends  RecyclerView.Adapter<GridViewImageAda
 
 	}
 
+	public void updateStickers() {
+		ArrayList<File> files = FileUtils.getFilePaths(context);
+		filePaths = files;
+		notifyDataSetChanged();
+	}
 
 	@Override
 	public long getItemId(int position) {

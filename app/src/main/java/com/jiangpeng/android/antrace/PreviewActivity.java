@@ -36,6 +36,7 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.PointF;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -149,14 +150,37 @@ public class PreviewActivity extends Activity {
                     m_isCropping = false;
                 } else {
                     m_progressBar.setVisibility(View.VISIBLE);
-                    GrayscaleThread();
+                    new AsyncTask<Void, Void, File>() {
+                        @Override
+                        protected File doInBackground(Void... voids) {
+                           return GrayscaleThread();
+                        }
+                        @Override
+                        protected void onPostExecute(File file) {
+                            super.onPostExecute(file);
+                            if(isDestroyed() && isFinishing())
+                                return;
+                            if (file != null) {
+                                Glide.with(m_imageView).load(file).centerInside().diskCacheStrategy(DiskCacheStrategy.NONE)
+                                        .skipMemoryCache(true).into(m_imageView);
+                            }
+                            if (m_progress != null) {
+                                m_progress.dismiss();
+                            }
+                        }
+                    }.execute();
+
                     m_ok.setText(R.string.quit);
                 }
                 return;
             }
             if (currentState == STATE_EDITED) {
                 monoBitmap = Bitmap.createBitmap(grayBitmap.getWidth(), grayBitmap.getHeight(), Bitmap.Config.ARGB_8888);
-                ThresholdThread();
+                File file = ThresholdThread();
+                Glide.with(m_imageView).load(file).centerInside().diskCacheStrategy(DiskCacheStrategy.NONE)
+                        .skipMemoryCache(true).into(m_imageView);
+                m_progressBar.setVisibility(View.INVISIBLE);
+                m_progress.dismiss();
                 return;
             }
             if (currentState == STATE_SAVE) {
@@ -168,7 +192,7 @@ public class PreviewActivity extends Activity {
     ;
 
 
-    void ThresholdThread() {
+    File ThresholdThread() {
         File file = null;
         if (filterType == MainActivity.FilterType.AI_GIF) {
             file = makeGif();
@@ -178,11 +202,8 @@ public class PreviewActivity extends Activity {
         if (filterType == MainActivity.FilterType.AI_DRAW_GIF) {
             file = makeAiDGif();
         }
-        Glide.with(m_imageView).load(file).centerInside().diskCacheStrategy(DiskCacheStrategy.NONE)
-                .skipMemoryCache(true).into(m_imageView);
-        m_progressBar.setVisibility(View.INVISIBLE);
-        m_progress.dismiss();
         currentState = STATE_SAVE;
+        return file;
     }
 
 
@@ -424,7 +445,7 @@ public class PreviewActivity extends Activity {
     }
     */
 
-    void GrayscaleThread() {
+    File GrayscaleThread() {
         if (grayBitmap != null) {
             Bitmap bm = grayBitmap;
             try {
@@ -439,11 +460,10 @@ public class PreviewActivity extends Activity {
             } catch (OutOfMemoryError err) {
             }
             monoBitmap = Bitmap.createBitmap(grayBitmap.getWidth(), grayBitmap.getHeight(), Bitmap.Config.ARGB_8888);
-            ThresholdThread();
+           return ThresholdThread();
         }
+        return null;
     }
-
-    ;
 
     class saveImage implements Runnable {
         @Override

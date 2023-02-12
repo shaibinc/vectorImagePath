@@ -40,6 +40,8 @@ public class MainActivity extends Activity {
 
 	private FilterType filterType;
 
+	private	GridViewImageAdapter adapter;
+
 
 
 	private LinearLayout createGif ;
@@ -82,7 +84,7 @@ public class MainActivity extends Activity {
 		savedProject.setItemAnimator(new DefaultItemAnimator());
 		ArrayList<File> files =    FileUtils.getFilePaths(this);
 		if (files.size() != 0) {
-			GridViewImageAdapter adapter = new GridViewImageAdapter(this, files);
+		 adapter = new GridViewImageAdapter(this, files);
 			savedProject.setAdapter(adapter);
 			savedProject.setVisibility(View.VISIBLE);
 			noSavedText.setVisibility(View.GONE);
@@ -162,6 +164,9 @@ public class MainActivity extends Activity {
 	}
 	@Override
 	protected void onResume() {
+		if(adapter != null) {
+			adapter.updateStickers();
+		}
 		super.onResume();
 	}
 
@@ -171,7 +176,6 @@ public class MainActivity extends Activity {
 //		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
-
 
 
 	static {
